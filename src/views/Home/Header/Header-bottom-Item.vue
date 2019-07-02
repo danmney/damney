@@ -1,17 +1,17 @@
 <template>
-    <div class="item"
+    <router-link :to="{name:this.mark}" class="item"
         @click="changeSel"
     >   <span v-if="flag" class="active">{{title}}</span>
         <span v-else>{{title}}</span>
-    </div>
+    </router-link>
 </template>
 
 <script>
 export default {
-    props:["title","mark","sel","change"],
+    props:["title","mark","sel"],
     methods:{
         changeSel(){
-            this.change(this.mark)
+            this.$router.push({name:this.mark});
         }
     },
     computed:{

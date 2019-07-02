@@ -7,7 +7,6 @@
                 :title="nav.title"
                 :mark = "nav.mark"
                 :sel = "selectNav"
-                :change ="getactive"
             ></HeaderBottomItem>
         </div>
     </div>
@@ -29,16 +28,10 @@ export default {
                 {id:4,title:"智能",mark:"capacity"},
                 {id:5,title:"电视",mark:"television"},
                 {id:6,title:"笔记本",mark:"notebook"},
-                {id:7,title:"家电",mark:"homeApp"},
-                {id:8,title:"生活周边",mark:"asideLife"}
+                {id:7,title:"家电",mark:"homeapp"},
+                {id:8,title:"生活周边",mark:"asidelife"}
             ],
-           selectNav:"recommend",
-           distance:0
-        }
-    },
-    methods:{
-        getactive(val){
-            this.selectNav = val;
+           selectNav:this.$route.name
         }
     }
 }

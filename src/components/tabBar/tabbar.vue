@@ -51,7 +51,7 @@ export default {
         padding: 0 30px;
         background-color: cornsilk;
         .fa{
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 </style>
