@@ -49,7 +49,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         padding: 0 30px;
-        background-color: cornsilk;
+        background-color: #e2e2e2;
         .fa{
             font-size: 18px;
         }

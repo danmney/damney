@@ -32,9 +32,9 @@ module.exports = {
         port: 8080,
         https: false,
         hotOnly: false,
-        proxy: {
+        proxy: {//http://39.97.239.101:8088/mi/iphoneGoods?page=1&limit=4
             "/api":{
-                target:"http://47.96.0.211:9000",
+                target:"39.97.239.101:8088",
                 changeOrigin:true,
                 pathRewrite:{
                     "^/api":""

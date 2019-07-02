@@ -15,7 +15,7 @@ import phone from "./phone";
 import televisions from "./televisions";
 let router = new Router({
   routes: [
-    {path:"/",redirect:"/home"},
+    {path:"/",redirect:"/recommend"},
     Home,
     Mine,
     Sort,

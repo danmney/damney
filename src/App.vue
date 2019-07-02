@@ -1,7 +1,9 @@
 <template>
   <div id="app">
       <tabbar></tabbar>
-    <router-view/>
+      <keep-alive include="home">
+          <router-view/>
+      </keep-alive>
   </div>
 </template>
 
@@ -11,9 +13,9 @@ export default {
   components:{
     tabbar
   }
-}
+} 
 </script>
-
+ 
 <style lang="scss" scoped>
     
 </style>

@@ -3,7 +3,7 @@
         <Header></Header>
         <Banner></Banner>
         <iconList></iconList>
-        <Content></Content>
+        <ContentPhonebox></ContentPhonebox>
     </div>
 </template>
 
@@ -11,13 +11,14 @@
 import Header from "./Header/Header";
 import Banner from "@/components/Banner/banner";
 import iconList from "./Contents/iconList";
-import Content from "./Contents/contentList";
+import ContentPhonebox from "./Contents/ContentPhoneBox"
 export default {
+    name:'home',
     components:{
         Header,
         Banner,
         iconList,
-        Content
+        ContentPhonebox
     }
 }
 </script>
