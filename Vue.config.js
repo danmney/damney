@@ -34,7 +34,7 @@ module.exports = {
         hotOnly: false,
         proxy: {//http://39.97.239.101:8088/mi/iphoneGoods?page=1&limit=4
             "/api":{
-                target:"39.97.239.101:8088",
+                target:"http://39.97.239.101:8088",
                 changeOrigin:true,
                 pathRewrite:{
                     "^/api":""
