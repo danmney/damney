@@ -12,6 +12,9 @@ import tabbar from "@/components/tabBar/tabbar"
 export default {
   components:{
     tabbar
+  },
+  created(){
+    this.$store.dispatch("initCart");
   }
 }
 </script>

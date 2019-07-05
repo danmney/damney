@@ -1,7 +1,7 @@
 <template>
     <div class="tv">
         <Header></Header>
-        <router-link :to='{name:"goodDetail",params:{id:204}}' class='imgbox'>
+        <router-link :to='{name:"goodDetail",params:{id:104}}' class='imgbox'>
             <img src="//i8.mifile.cn/v1/a1/8d84d56b-8db6-54e0-6016-65d1bda2a554!720x512.webp" width ="" alt="">
         </router-link>
         <div class="cellbox">
@@ -17,9 +17,11 @@
                 infinite-scroll-disabled="loading"
                 infinite-scroll-distance="10" 
             >
-                <div class="list " 
+                <router-link class="list " 
                     v-for='tv in tvs'
                     :key = 'tv.goodId'
+                    :to = "{name:'goodDetail',params:{id:tv.goodId}}"
+                    tag="div"
                 >
                     <div class="top">
                         <img :src="tv.smlImgUrl" alt="">
@@ -30,7 +32,7 @@
                         <div class='price'>￥{{tv.price}}起</div>
                         <div class='button'>立即购买</div>
                     </div>
-                </div>
+                </router-link>
             </div>
         </div>
         <!-- 底部图片 -->
@@ -55,11 +57,11 @@
         data(){
             return{
                 imgs:[
-                    {id:201,src:'//i8.mifile.cn/v1/a1/5106ae31-0f4a-caa0-332a-926bb9202aff!144x152.webp'},
-                    {id:202,src:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/4fba996205e2544b576ce0d34fb17af9.jpg?thumb=1&w=144&h=152'},
-                    {id:203,src:'//i8.mifile.cn/v1/a1/9ad963c9-eaba-8fb2-ec14-92be182d17b8!144x152.webp'},
-                    {id:204,src:'//i8.mifile.cn/v1/a1/2bc647b5-8826-87e1-ed9e-1cf97ca897fc!144x152.webp'},
-                    {id:205,src:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/be6e843fbbb4c91f5c693675a86825b5.jpg?thumb=1&w=144&h=152'},
+                    {id:101,src:'//i8.mifile.cn/v1/a1/5106ae31-0f4a-caa0-332a-926bb9202aff!144x152.webp'},
+                    {id:102,src:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/4fba996205e2544b576ce0d34fb17af9.jpg?thumb=1&w=144&h=152'},
+                    {id:103,src:'//i8.mifile.cn/v1/a1/9ad963c9-eaba-8fb2-ec14-92be182d17b8!144x152.webp'},
+                    {id:104,src:'//i8.mifile.cn/v1/a1/2bc647b5-8826-87e1-ed9e-1cf97ca897fc!144x152.webp'},
+                    {id:105,src:'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/be6e843fbbb4c91f5c693675a86825b5.jpg?thumb=1&w=144&h=152'},
                 ],
                 tvs:[],
                 loading:false,

@@ -1,5 +1,5 @@
 <template>
-    <div class="tabbar">
+    <div class="tabbar" v-show="isShow">
         <tabItem
             v-for="nav in navs"
             :key="nav.id"
@@ -15,6 +15,7 @@
 
 <script>
 import tabItem from "./tabItem";
+import router from "@/router";
 export default {
     components:{
         tabItem
@@ -27,13 +28,65 @@ export default {
                 {id:3,title:"购物车",icon:"shopping-cart",mark:"shoppingCar"},
                 {id:4,title:"我的",icon:"user-o",mark:"mine"}
             ],
-            selects:"home"
+            selects:"home",
+            isShow:true
         }
     },
     methods:{
         changeSelect(val){
             this.selects = val;
+        },
+        changeRoute(to){
+            switch(to.name){//目标路由名
+                case "goodDetail":
+                    this.isShow = false;
+                break;
+                case "shoppingCar":
+                    this.isShow = false;
+                break;
+                default:
+                    this.isShow = true;
+                    break;
+            };
         }
+    },
+    watch:{
+        $route(val){
+            this.changeRoute(val);
+            let routeName = this.$route.name;
+            // console.log(typeof routeName);
+           if(routeName == "iphone" || routeName == "television"){
+                this.selects = "home";
+            }else{
+                this.selects = routeName;
+            }
+            /* switch(routeName){
+                case "phone":
+                    this.selects = "home";
+                    break;
+                case "television":
+                    this.selects = "home";
+                    break;
+                case "home":
+                    this.selects = "home";
+                    break;
+                case "mine":
+                    this.selects = "name";
+                    break;
+                case "shoppingCar":
+                    this.selects = "shoppingCar";
+                    break;
+                default:
+                    break;
+            }
+             */
+        },
+    },
+    created(){
+        router.beforeEach((to,from,next)=>{
+            this.changeRoute(to);
+            next();
+        })
     }
 }
 </script>

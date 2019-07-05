@@ -1,5 +1,5 @@
 export default {
     name:"goodDetail",
-    path:"/goodDetail",
-    component:()=>import("@/views/Home/Detail"),
+    path:"/goodDetail/:id",
+    component:()=>import("@/views/ShoppingCar/Gooddetail")
 }

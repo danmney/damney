@@ -4,7 +4,7 @@
         <Banner></Banner>
         <h2>爆款推荐</h2>
         <div class="show">
-            <router-link :to='{name:"goodDetail",params:{id:101}}' class="imgbox" tag="div">
+            <router-link :to='{name:"goodDetail",params:{id:201}}' class="imgbox" tag="div">
                 <img width='100%' src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/018bc1330f53d93d5e4241402e27d36f.jpg?thumb=1&w=696&h=436" alt="">
             </router-link>
             <div class="info">

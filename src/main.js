@@ -9,6 +9,7 @@ import "./stylesheets/main.scss";
 import swiper from "swiper/dist/css/swiper.min.css";
 //引入rem文件
 import "./models/rem";
+import "./models/directive";
 //引入mint-ui
 import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);

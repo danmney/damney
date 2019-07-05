@@ -6,6 +6,7 @@ import ShoppingCar from './shoppingCar'
 import phone from './phone'
 import television from './television'
 import recommend from './recommend'
+import GoodDetail from './goodDetail'
 
 Vue.use(Router)
 import Home from "./home"
@@ -19,6 +20,7 @@ let router = new Router({
     phone,
     television,
     recommend,
+    GoodDetail,
   ]
 })
 export default router;
