@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <tabbar></tabbar>
-      <keep-alive include="home,phone,tv,contentList">
+      <keep-alive include="home,phone,tv,contentList,sort">
         <router-view></router-view>
       </keep-alive>
   </div>

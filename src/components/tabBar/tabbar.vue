@@ -44,6 +44,12 @@ export default {
                 case "shoppingCar":
                     this.isShow = false;
                 break;
+                case "list":
+                    this.isShow = false;
+                break;
+                case "bodysearch":
+                    this.isShow = false;
+                break;
                 default:
                     this.isShow = true;
                     break;
