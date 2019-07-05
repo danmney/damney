@@ -2,8 +2,8 @@
     <div class="tabItem" @click="change">
         <span v-if="flag" class = "active"><slot name="tabIcon"></slot></span>
          <span v-else><slot name="tabIcon"></slot></span>
-        <span v-if= "flag" class = "active">{{title}}</span>
-        <span v-else >{{title}}</span>
+        <span  v-if= "flag" class = "active title">{{title}}</span>
+        <span v-else class = "title">{{title}}</span>
     </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        font-size: 16px;
+        font-size: 14px;
     }
     .active{
         color:coral;

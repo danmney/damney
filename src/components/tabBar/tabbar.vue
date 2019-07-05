@@ -23,12 +23,12 @@ export default {
     data(){
         return{
             navs:[
-                {id:1,title:"首页",icon:"university",mark:"home"},
+                {id:1,title:"首页",icon:"university",mark:"recommend"},
                 {id:2,title:"分类",icon:"calendar-minus-o",mark:"sort"},
                 {id:3,title:"购物车",icon:"shopping-cart",mark:"shoppingCar"},
                 {id:4,title:"我的",icon:"user-o",mark:"mine"}
             ],
-            selects:"home",
+            selects:"recommend",
             isShow:true
         }
     },
@@ -55,8 +55,8 @@ export default {
             this.changeRoute(val);
             let routeName = this.$route.name;
             // console.log(typeof routeName);
-           if(routeName == "iphone" || routeName == "television"){
-                this.selects = "home";
+           if(routeName == "phone" || routeName == "television"){
+                this.selects = "recommend";
             }else{
                 this.selects = routeName;
             }
@@ -94,18 +94,19 @@ export default {
 <style lang = "scss" scoped>
     .tabbar{
         width: 100%;
-        height: 60px;
+        height: 50px;
         position: fixed;
         bottom:0px;
         left: 0;
+        z-index: 30;
         display:flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 30px;
         /* padding-bottom:60px; */
-        background-color: cornsilk;
+        background-color: #f1f1f1;
         .fa{
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 </style>

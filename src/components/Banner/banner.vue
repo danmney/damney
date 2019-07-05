@@ -6,7 +6,11 @@
                     v-for="banner in banners"
                     :key="banner.id"
                  >
-                     <img :src="banner.attr" alt="">
+                   <router-link
+                    class="div"
+                    :to="{name:'goodDetail',params:{id: banner.goodId}}">
+                        <img :src="banner.attr" alt="">
+                   </router-link>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -21,9 +25,9 @@ export default {
     data(){
         return{
             banners:[
-                {id:1,attr:"https://i1.mifile.cn/a4/xmad_15617449331718_ckXCh.jpg"},
-                {id:2,attr:"https://i1.mifile.cn/a4/xmad_15616258013099_mRayH.jpg"},
-                {id:3,attr:"https://i1.mifile.cn/a4/xmad_15616437370883_EkYwC.jpg"}
+                {goodId: 210,attr:"https://i1.mifile.cn/a4/xmad_15617449331718_ckXCh.jpg"},
+                {goodId: 111,attr:"https://i1.mifile.cn/a4/xmad_15616258013099_mRayH.jpg"},
+                {goodId: 209,attr:"https://i1.mifile.cn/a4/xmad_15616437370883_EkYwC.jpg"}
             ]
         }
     },
@@ -33,7 +37,8 @@ export default {
                 loop:true,
                 pagination: {
                     el: '.swiper-pagination',
-                }
+                },
+                autoplay:true
             });
         })
     }

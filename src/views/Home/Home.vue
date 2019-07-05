@@ -3,7 +3,7 @@
         <Header></Header>
         <Banner></Banner>
         <iconList></iconList>
-        <Content></Content>
+        <Content :dis = "dis"></Content>
         <router-view></router-view>
     </div>
 </template>
@@ -14,11 +14,22 @@ import Banner from "@/components/Banner/banner";
 import iconList from "./Contents/iconList";
 import Content from "./Contents/contentList";
 export default {
+    name:"home",
     components:{
         Header,
         Banner,
         iconList,
         Content
+    },
+    data(){
+        return{
+            dis:0
+        }
+    },
+     beforeRouteLeave(to,from,next){
+        //记录当前的距离
+        this.dis = document.documentElement.scrollTop || document.body.scrollTop;
+        next();
     }
 }
 </script>
